@@ -1,0 +1,3 @@
+(library
+ (name assembler)
+ (modules ast parser machine))
