@@ -18,13 +18,13 @@ A complete, working 16-bit computer architecture built entirely from the ground 
 
 ## How to Run the Assembler
 
-Navigate to the assembler directory and compile the OCaml source:
+Navigate to the Assembler directory and build the project using Dune:
 
-    cd assembler
-    ocamlopt -o assembler main.ml
+    cd Assembler
+    dune build
 
-Run the compiled executable against any Hack assembly file (.asm):
+Run the assembler against any Hack assembly file (.asm) and redirect the output to a `.hack` file:
 
-    ./assembler program.asm
+    dune exec assembler -- program.asm > program.hack
 
-This will output a program.hack file containing the translated 16-bit binary instructions.
+This will output a `program.hack` file containing the translated 16-bit binary instructions.
